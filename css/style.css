@@ -1,0 +1,201 @@
+/* === Windows 98-ish base === */
+:root{
+  --bg: #C0C0C0;
+  --window: #DFDFDF;
+  --title: #000080;
+  --black: #000000;
+  --white: #FFFFFF;
+  --dark: #404040;
+  --mid: #808080;
+  --terminal-green: #00FF00;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.desktop{
+  min-height: 100vh;
+  padding: 28px 16px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
+}
+
+/* Window */
+.window{
+  width: min(920px, 92vw);
+  background: var(--window);
+  border: 2px solid var(--dark);
+}
+
+.titlebar{
+  background: var(--title);
+  color: var(--white);
+  padding: 6px 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.win-controls{
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.window-body{
+  padding: 14px;
+  border-top: 2px solid var(--white);
+}
+
+.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.hr-98{
+  border: none;
+  border-top: 2px solid var(--mid);
+  margin: 12px 0;
+}
+
+/* Panels (3D effect) */
+.panel-98{
+  background: var(--bg);
+  padding: 12px;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
+.panel-title{
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Top grid */
+.top-grid{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.panel{
+  flex: 1;
+  min-width: 260px;
+}
+
+.focus .bullets{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.status{
+  background: var(--terminal-green);
+  color: var(--black);
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+/* Terminal */
+.terminal{
+  background: var(--black);
+  color: var(--terminal-green);
+  padding: 12px;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
+.terminal-text{
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Buttons */
+.buttonbar{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn98{
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--bg);
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: none;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  border-right: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
+.btn98:active{
+  border-top: 2px solid var(--dark);
+  border-left: 2px solid var(--dark);
+  border-right: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+}
+
+.btn-disabled{
+  background: #E0E0E0;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+/* Projects */
+.dir-box{
+  background: var(--white);
+  padding: 10px;
+  border: 1px solid var(--mid);
+  margin-bottom: 14px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.card-title{
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.card-actions{
+  margin-top: 10px;
+}
+
+.tip{
+  margin-top: 14px;
+  background: #FFFFCC;
+  padding: 10px;
+  border: 1px solid var(--mid);
+}
+
+.contact{
+  margin-top: 8px;
+}
+
+.footer-note{
+  font-size: 12px;
+  color: #333;
+}
+
+.mono-focus .bullets{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
